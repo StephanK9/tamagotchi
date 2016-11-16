@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A Tamagotchi</title>
+  </head>
+  <body>
+    <h3>Here is your Tamagotchi and its stats</h3>
+    <p>@Model.GetName()</p>
+    <form action="/feed/@Model.GetId()" method="post">
+      <p>@Model.GetHunger()</p>
+      <button type="click" id="hunger">Feed</button>
+    </form>
+    <form action="/play/@Model.GetId()" method="post">
+      <p>@Model.GetBoredom()</p>
+      <button type="click" id="boredom">Play</button>
+    </form>
+    <form action="/rest/@Model.GetId()" method="post">
+      <p>@Model.GetRest()</p>
+      <button type="click" id="rest">Sleep</button>
+    </form>
+  </body>
+</html>
